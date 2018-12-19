@@ -2,11 +2,12 @@ const mongoose = require('mongoose')
 const Fawn = require("fawn");
 import config from '../config';
 
-var dbUrl = 'mongodb://localhost:27017/app-publisher';
+var dbUrl = `mongodb://${config.dbHost}:${config.dbPort}/${config.dbName}`;
 if (config.dbUser) {
-    dbUrl = `mongodb://${config.dbUser}:${config.dbPassword}@localhost:27017/app-publisher`;
+    dbUrl = `mongodb://${config.dbUser}:${config.dbPass}@${config.dbHost}:${config.dbPort}/${config.dbName}`;
 }
 
+console.log(dbUrl)
 mongoose.connect(dbUrl, (err) => {
     if (err) {
         console.log('Mongoose connection error: ' + err.message)

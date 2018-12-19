@@ -282,6 +282,9 @@
   .headernav-wrapper .rightWrapper .userwrapper {
     display: inline-block;
     height: 100%;
+    border-top: solid 1px #fff;
+    border-left: solid 1px #fff;
+    border-right: solid 1px #fff;
   }
 
   .headernav-wrapper .rightWrapper .userwrapper:hover {
@@ -341,5 +344,8 @@
     border-bottom: solid 1px #eee;
     box-sizing: border-box;
     font-size: 14px;
+  }
+  .headernav-wrapper .rightWrapper .userInfoSub:hover {
+    background-color: #eee;
   }
 </style>
