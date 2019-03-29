@@ -1,4 +1,5 @@
-FROM harbor.qianfan123.com/base/hd_nginx:1.11.3-lua-node-9.11.2-glibc-alpine
+#FROM harbor.qianfan123.com/base/hd_nginx:1.11.3-lua-node-9.11.2-glibc-alpine
+FROM nginx
 
 # 安装依赖库
 RUN npm install -g pm2 babel-cli \
